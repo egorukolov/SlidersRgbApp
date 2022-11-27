@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -76,12 +77,21 @@
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZPn-06-uae">
                                                 <rect key="frame" x="-2" y="0.0" width="227" height="31"/>
+                                                <connections>
+                                                    <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="JsH-iG-prB"/>
+                                                </connections>
                                             </slider>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nkE-QL-zYp">
+                                            <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nkE-QL-zYp">
                                                 <rect key="frame" x="-2" y="43" width="227" height="31"/>
+                                                <connections>
+                                                    <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="acL-h5-F4n"/>
+                                                </connections>
                                             </slider>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="HBJ-t1-oDD">
+                                            <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="HBJ-t1-oDD">
                                                 <rect key="frame" x="-2" y="86" width="227" height="31"/>
+                                                <connections>
+                                                    <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="n0o-pu-b1v"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -106,6 +116,15 @@
                             <constraint firstItem="ig8-L4-ESQ" firstAttribute="top" secondItem="0Qo-Wk-PIB" secondAttribute="bottom" constant="50" id="uWw-Rr-S8M"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blueValueLabel" destination="wry-jZ-98m" id="bdM-vE-h1G"/>
+                        <outlet property="blueValueSlider" destination="HBJ-t1-oDD" id="5wy-Bf-QNE"/>
+                        <outlet property="greenValueLabel" destination="th3-S9-GWL" id="k4w-TY-t5W"/>
+                        <outlet property="greenValueSlider" destination="nkE-QL-zYp" id="xbh-gZ-owV"/>
+                        <outlet property="multiColorView" destination="0Qo-Wk-PIB" id="5fr-CL-qfC"/>
+                        <outlet property="redValueLabel" destination="th3-S9-GWL" id="Xz7-jC-qWR"/>
+                        <outlet property="redValueSlider" destination="ZPn-06-uae" id="rdE-Hw-5rK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
